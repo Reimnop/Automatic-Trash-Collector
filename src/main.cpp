@@ -32,7 +32,7 @@ void loop() {
     float chargeBaseRelativeAngle = ioController.getChargeBaseRelativeAngle();
     navigationController.setChargeBaseRelativeAngle(chargeBaseRelativeAngle);
 
-    for (int i = 0; i < sizeof(activities) / sizeof(activities[0]); i++) {
+    for (size_t i = 0; i < sizeof(activities) / sizeof(activities[0]); i++) {
         if (activities[i]->isActivityActive()) {
             activities[i]->update(deltaTime);
             break;
